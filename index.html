@@ -1,37 +1,100 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Coworking Signup</title>
-    </head>
-    <body>
-        <div class="background-container">
-            <div class="logo-container">
-                <div class="logo">aQuietSpace</div>
-            </div>
-        </div>
-        <div class="signup-container">
-            <div class="text subtitle">Get spoiled at work, join a passionate <span id="community">community</span>.</div>
-            <div class="text call-text">Sign up for our coworking space rental: the quietest first-rate solutions four your remote working shifts, brainstorming and creative sessions!</div>
-            <form action="#">
-                <legend>Ready to start?</legend>
-                <div class="form-row">
-                    <input type="text" name="" id="first-name" placeholder="First Name*" required>
-                    <input type="text" name="" id="last-name" placeholder="Last Name*" required>
-                </div>
-                <div class="form-row">
-                    <input type="email" name="" id="email" placeholder="Email*" required>
-                    <input type="tel" name="" id="phone" placeholder="Phone number*" required>
-                </div>
-                <div class="form-row">
-                    <input type="password" name="" id="password" placeholder="Password*" required>
-                    <input type="password" name="" id="password-confirm" placeholder="Confirm password" required>
-                </div>
-                <button type="submit">Create account</button>
-            </form>
-            <p id="login-text">Already have an account? <span><a href="#">Log in</a></span></p>
-        </div>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="index.js"></script>
+		<title>Coworking Signup</title>
+	</head>
+	<body>
+		<div class="background-container">
+			<div class="logo-container">
+				<div class="logo">aQuietSpace</div>
+			</div>
+		</div>
+		<div class="signup-container">
+			<div class="text subtitle">
+				Get spoiled at work, join a passionate
+				<span id="community">community</span>.
+			</div>
+			<div class="text call-text">
+				Sign up for our coworking space rental: the quietest first-rate
+				solutions four your remote working shifts, brainstorming and creative
+				sessions!
+			</div>
+			<form action="#">
+				<legend>Ready to start?</legend>
+				<div class="form-row">
+					<input
+						type="text"
+						name=""
+						id="first-name"
+						placeholder="First Name*"
+						required
+						pattern="^\b\D*\b"
+					/>
+					<input
+						type="text"
+						name=""
+						id="last-name"
+						placeholder="Last Name*"
+						required
+						pattern="^\b\D*\b"
+					/>
+				</div>
+				<div class="form-row">
+					<input
+						type="email"
+						name=""
+						id="email"
+						placeholder="Email*"
+						required
+					/>
+					<input
+						type="tel"
+						name=""
+						id="phone"
+						placeholder="Phone number*"
+						required
+					/>
+				</div>
+				<div class="form-row">
+					<input
+						type="password"
+						name=""
+						id="password"
+						placeholder="Password*"
+						required
+						minlength="8"
+						maxlength="16"
+						pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+					/>
+					<input
+						type="password"
+						name=""
+						id="password-confirm"
+						placeholder="Confirm password"
+						required
+                        minlength="8"
+						maxlength="16"
+						pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+					/>
+				</div>
+				<p id="pass-info">
+					Make sure you password is between 8-16 characters and contains at
+					least an uppercase letter, a lowercase letter and a number.
+				</p>
+				<label for="terms">
+					<input type="checkbox" name="" id="terms" required/>
+					I agree to the <a href="#">Terms of service</a> and
+					<a href="#">Privacy policy</a>.
+				</label>
+				<button type="submit">Create account</button>
+			</form>
+			<p id="login-text">
+				Already have an account? <span><a href="#">Log in</a></span>
+			</p>
+		</div>
+	</body>
+</html>
