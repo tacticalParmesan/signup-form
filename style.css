@@ -164,3 +164,38 @@ input[type=checkbox] {
 	margin-bottom: -0.5rem
 }
 
+@media only screen and (max-width: 600px) {
+	.background-container {
+		display: none;
+	}
+	.signup-container {
+		align-items: center;
+		background-image: url("./assets/office.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	.text {
+		text-align: center;
+	}
+	.text.subtitle {
+		margin-top: 1rem;
+	}
+	
+	form {
+		align-items: center;
+		justify-content: center;
+		padding-left: 0rem;
+	}
+	.form-row {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#pass-info {
+		text-align: center;
+	}
+	#login-text {
+		margin-bottom: 1.8rem;
+	}
+}
+
