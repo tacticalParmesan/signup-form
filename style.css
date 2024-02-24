@@ -37,6 +37,7 @@ body {
 .logo-container {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 
 	margin-top: 15rem;
@@ -62,6 +63,10 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	gap: 1.8rem;
+}
+
+.signup-container > .logo-container {
+	display: none;
 }
 
 .text,
@@ -174,28 +179,49 @@ input[type=checkbox] {
 		background-size: cover;
 		background-position: center;
 	}
+	.signup-container > .logo-container {
+		display: flex;
+		margin: 0px;
+		align-items: center;
+		justify-content: center
+	}
 	.text {
 		text-align: center;
+		text-shadow: 0px 2px 2px gray;
+
 	}
-	.text.subtitle {
-		margin-top: 1rem;
-	}
-	
 	form {
 		align-items: center;
 		justify-content: center;
 		padding-left: 0rem;
+
+		border-radius: 12px;
+		border-top-left-radius: 3rem;
+		border-top-right-radius: 3rem;
+
+		box-shadow: none;
 	}
 	.form-row {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
+	input[type=text],
+	input[type=email],
+	input[type=tel],
+	input[type=password]{
+		width: 24rem;
+	}
 	#pass-info {
 		text-align: center;
 	}
 	#login-text {
+		background-color: azure;
+		border-radius: 12px;
+		padding: 1rem;
+
 		margin-bottom: 1.8rem;
+		align-self: center;
 	}
 }
 
